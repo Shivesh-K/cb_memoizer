@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "Coding Blocks Memoizer",
+    "version": "1.0",
+    "description": "Add the ability to save the written code automatically in Coding Blocks",
+    "permissions": [
+        "activeTab",
+        "contextMenus"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://online.codingblocks.com/*"
+            ],
+            "js": [
+                "./contentScript.js"
+            ],
+            "all_frames": true
+        }
+    ],
+    "web_accessible_resources": [
+        "./memoizer.js"
+    ]
+}
